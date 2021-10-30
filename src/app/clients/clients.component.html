@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <head>
-  <h1>TP-7 Angular</h1>
+  
 </head>
 <body>
-  <form action="">
-	ID-Client: 	<input type="number"[(ngModel)]="clientID">
-    	Name: 		<input type="text"[(ngModel)]="firstName">
-    	Lastname:	<input type="text"[(ngModel)]="lastName">
-	DNI:		<input type="number"[(ngModel)]="dni">
-	Email:		<input type="text"[(ngModel)]="email">
-	Address: 	<input type="text"[(ngModel)]="address"> 
-  </form>
-
+<h1>TP-7 Angular</h1>
+<div class="container">
+	<form action="">
+		<div class="clientid">
+			<label for="clientid" class="form-label">CLIENT ID</label>
+			<input type="clientid" class="form-control" id="clientid" [(ngModel)]="clientID">
+		</div>
+		<div class="firstname">
+			<label for="firstname" class="form-label">FIRSTNAME</label>
+			<input type="firstname" class="form-control" id="firstname" [(ngModel)]="firstName">
+		</div>
+		<div class="lastname">
+			<label for="lastname" class="form-label">LASTNAME</label>
+			<input type="lastname" class="form-control" id="lastname" [(ngModel)]="lastName">
+		</div>
+		<div class="dni">
+			<label for="dni" class="form-label">DNI</label>
+			<input type="dni" class="form-control" id="dni" [(ngModel)]="dni">
+		</div>
+		<div class="email">
+			<label for="email" class="form-label">EMAIL</label>
+			<input type="email" class="form-control" id="email" [(ngModel)]="email">
+		</div>
+		<div class="address">
+			<label for="address" class="form-label">ADDRESS</label>
+			<input type="address" class="form-control" id="address" [(ngModel)]="address">
+		</div>
+		<br>
+		<input type="button" value="ADD" class="btn btn-primary">
+	</form>
+</div>
 </body>

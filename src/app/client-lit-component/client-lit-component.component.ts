@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ListServiceService } from '../list-service.service';
 
 @Component({
   selector: 'app-client-lit-component',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-lit-component.component.css']
 })
 export class ClientLitComponentComponent implements OnInit {
+  myList: string[] = [];
 
-  constructor() { }
+  constructor(private listService: ListServiceService) { }
 
   ngOnInit(): void {
+    this.listService.list$.subscribe((value: string[]) =>{this.myList = value})
   }
 
 }
